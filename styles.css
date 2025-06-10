@@ -1,0 +1,142 @@
+:root {
+  /* Primary */
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+
+  /* Neutral */
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--Grey);
+  background-color: var(--Cream);
+  padding: 0 1rem;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  display: none;
+}
+
+.product-card {
+  background-color: var(--White);
+  border-radius: 0.5rem;
+}
+
+.product-image-mobile {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5rem;
+}
+
+.product-type {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-title {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--Black);
+}
+
+.product-info {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--Green-500);
+}
+
+.original-price {
+  font-size: 0.875rem;
+  text-decoration: line-through;
+}
+
+.add-to-cart-button {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--Green-500);
+  color: var(--White);
+  padding: 1rem 0;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+}
+
+.add-to-cart-button:hover {
+  background-color: var(--Green-700);
+}
+
+@media (min-width: 40em) {
+  .product-image-mobile {
+    display: none;
+  }
+
+  .product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+
+  .product-details {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .product-type {
+    margin-bottom: 1rem;
+  }
+}
